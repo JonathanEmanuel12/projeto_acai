@@ -1,9 +1,9 @@
-const sequelize = require("db");
+const sequelize = require("./db");
 const { DataTypes } = require("sequelize");
 
-const Item = require("item");
-const Acai = require("acai");
-const Pedido = require("pedido");
+const Item = require("./item");
+const Acai = require("./acai");
+const Pedido = require("./pedido");
 
 
 const Acai_Item = sequelize.define("Acai_Item", {
@@ -35,6 +35,6 @@ async function criarTabelasRelacoes() {
     await sequelize.sync();
 }
 
-await criarTabelasRelacoes();
+criarTabelasRelacoes();
 
 module.exports = { Item, Acai, Pedido }

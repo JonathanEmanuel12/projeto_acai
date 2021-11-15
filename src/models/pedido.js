@@ -1,4 +1,4 @@
-const sequelize = require("db");
+const sequelize = require("./db");
 const { DataTypes } = require("sequelize");
 
 const Pedido = sequelize.define("Pedido", {
@@ -16,6 +16,6 @@ async function criarPedido() {
     await sequelize.sync();
 }
 
-await criarPedido();
+criarPedido();
 
 module.exports = Pedido;    
