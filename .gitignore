@@ -1,5 +1,5 @@
 node_modules/
-tests/
+test/
 criacao_script_acai.sql
 script importante para manipulação.sql
 .env

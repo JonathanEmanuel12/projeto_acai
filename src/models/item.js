@@ -10,6 +10,9 @@ const Item = sequelize.define("Item", {
         type: DataTypes.DECIMAL,
         allowNull: false
     },
+    tamanho: {
+        type: DataTypes.STRING,
+    },
     descricao: {
         type: DataTypes.TEXT,
     }
