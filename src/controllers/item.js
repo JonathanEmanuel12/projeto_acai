@@ -17,28 +17,32 @@ const itemController = {
         }
         catch(error) {
             console.log(error.message);
+            return {mensagem: "Falha no servidor, favor tentar mais tarde"};
         }
-        return {mensagem: "Falha no servidor, favor tentar mais tarde"};
+        
     },
     somatorioPreco: (itens) => {
-        itens.reduce((acum, item) => {
-            acum += item.preco;
+        return itens.reduce((acum, item) => {
+            acum = acum + item.preco;
+            return acum;
         }, 0);
     },
     buscarTodosItens: async () => {
         let itens;
         try {
-            itens = await itemModel.findAll();
+            itens = await itemModel.findAll({ raw: true });
             return itens;
         }
         catch(error) {
             console.log(error.message);
+            return {mensagem: "Falha no servidor, favor tentar mais tarde"};
         }
-        return {mensagem: "Falha no servidor, favor tentar mais tarde"};
+        
     },
     buscarTiposAcai: async () => {
         try{
             return await itemModel.findAll({
+                raw: true,
                 attributes: ['titulo'],
                 distinct: true,
                 where: {
@@ -48,8 +52,8 @@ const itemController = {
         }
         catch(error) {
             console.log(error.message);
+            return {mensagem: "Falha no servidor, favor tentar mais tarde"};
         }
-        return {mensagem: "Falha no servidor, favor tentar mais tarde"};
         
     },
     buscarTamanhosAcai: async () => {
@@ -65,8 +69,9 @@ const itemController = {
         }
         catch(error) {
             console.log(error.message);
+            return {mensagem: "Falha no servidor, favor tentar mais tarde"};
         }
-        return {mensagem: "Falha no servidor, favor tentar mais tarde"};
+        
     }
 
 
