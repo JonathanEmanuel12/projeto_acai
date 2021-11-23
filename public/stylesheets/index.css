@@ -1,8 +1,88 @@
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: rgb(71, 0, 71);
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+img {
+    position: relative;
+    top: 0;
+    height: auto;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+main .sobreposto_a_imagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 40px;
+    max-width: 550px;
+    background-color: rgba(0, 0, 0, 0.555);
+    padding-bottom: 40px;
+    
+}
+.mensagem {
+    font-size: 20px;
+    color: #d2f7c9;
+}
+
+button {
+    border: 4px #26bd00 solid;
+    padding: 10px;
+    font-size: 20px;
+    width: 220px;
+    margin-top: 15px;
+    background-color: rgb(71, 0, 71);
+    color: #d2f7c9; 
+    border-radius: 10px;
+}
+
+#pedido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
+}
+.add {
+    padding: 0px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-self: center;
+    font-size: 25px;
+}
+
+button:hover {
+    background-color: #d2f7c9;
+    color: rgb(71, 0, 71);
+}
+
+button:active {
+    background-color: #d2f7c9;
+    color: rgb(71, 0, 71);
+}
+
+#verPedidos {
+    margin-top: 15%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(44, 44, 44);
+    color: rgb(93, 255, 93);
+    padding-top: 20px;
+    
+
+}
+
+@media (min-width: 720px) {
+
 }

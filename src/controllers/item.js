@@ -12,7 +12,7 @@ const itemController = {
                 tamanho: body.tamanho,
                 descricao: body.descricao
             });
-
+            
             return {mensagem: "Item salvo com sucesso"}
         }
         catch(error) {
@@ -57,7 +57,6 @@ const itemController = {
         
     },
     buscarTamanhosAcai: async () => {
-        //pegar tamanhos distinct
         try {
             return await itemModel.findAll({
                 attributes: ['tamanho'],
